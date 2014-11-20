@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+Hi
+=======
 Hello!
 
 だいご
 
+>>>>>>> FETCH_HEAD
