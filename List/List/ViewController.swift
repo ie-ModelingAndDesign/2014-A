@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // 表示するセルの中身
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "myCell")
-        cell.textLabel.text = "\(indexPath.row)行目!"
+        cell.textLabel.text = "\(indexPath.row)行目"
         return cell
     }
     
