@@ -13,6 +13,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class ViewController: UIViewController, UIPickerViewDelegate {
     var emptyarray:[String?] = []
@@ -139,7 +140,12 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         emptyarray.append(myTextField.text)
         println("\(emptyarray[ok!]) + \(myTextField.text) ")
     println("\(ok!)")
-        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let memoContext: NSManagedObjectContext! = appDel.managedObjectContext!
+        let memoEntity: NSEntityDescription = NSEntityDescription.entityForName("Task", inManagedObjectContext: memoContext)!
+        var newData = Task(entity: memoEntity, insertIntoManagedObjectContext: memoContext)
+        newData.memo = myTextField.text
+        newData.date = NSDate()
     
         }
     
