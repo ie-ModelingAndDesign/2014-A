@@ -16,8 +16,7 @@ import AVFoundation
 import CoreData
 
 class ViewController: UIViewController, UIPickerViewDelegate {
-    var emptyarray:[String?] = []
-    var names = [AnyObject]()
+    var array = [AnyObject]()
     var myTextField: UITextField!
     var myTextField2: UITextField!
     var myAudioPlayer : AVAudioPlayer!
@@ -75,7 +74,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             //前回の保存内容が格納された配列の中身を一つずつ取り出す
             for nameString in objects!{
                 //配列に追加していく
-                names.append(nameString as NSString)
+                array.append(nameString as NSString)
             }
         }
         
@@ -101,11 +100,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"         // フォーマットの指定
         var timenow = dateFormatter.stringFromDate(now);
         var 回数:Int = 0
-        for val:AnyObject in names{
+        for val:AnyObject in array{
         if(timenow==val as NSString){
         
-            Timer()
-            names.removeAtIndex(回数)
+            Alert()
+            array.removeAtIndex(回数)
         }
             回数++
         }
@@ -117,7 +116,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     
-    func Timer(){
+    func Alert(){
         
        // UIAlertControllerを作成する.
         let myAlert = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: .Alert)
@@ -132,6 +131,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
     }
     func 確認(){
+        //保存の際の確認
         let 確認Alert = UIAlertController(title: "確認", message: "この時間に設定しますか?", preferredStyle: .Alert)
         確認Alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {action in self.myOK() }))
         確認Alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: {action in self.myCancel()}))
@@ -156,25 +156,17 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     
     func myOK(){
-        names = names as NSArray
+        array = array as NSArray
         var ok:Int?
-        ok = names.count
+        ok = array.count
         
         
-        names.append(myTextField.text)
-        println("\(names[ok!]) + \(myTextField.text) ")
+        array.append(myTextField.text)
+        println("\(array[ok!]) + \(myTextField.text) ")
     println("\(ok!)")
-      /*  let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let memoContext: NSManagedObjectContext! = appDel.managedObjectContext!
-        let memoEntity: NSEntityDescription = NSEntityDescription.entityForName("Task", inManagedObjectContext: memoContext)!
-        var newData = Task(entity: memoEntity, insertIntoManagedObjectContext: memoContext)
-        newData.memo = myTextField.text
-        newData.date = NSDate()
-    */
+    
         //NSUserDefaultsのインスタンスを生成
-        defaults.setObject(names, forKey:"NAME")
-        
-        // シンクロを入れないとうまく動作しないときがあります
+        defaults.setObject(array, forKey:"NAME")
         defaults.synchronize()
     }
     
