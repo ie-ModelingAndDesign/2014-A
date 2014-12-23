@@ -17,9 +17,11 @@ import CoreData
 
 class ViewController: UIViewController, UIPickerViewDelegate {
     var emptyarray:[String?] = []
+    var names = [AnyObject]()
     var myTextField: UITextField!
     var myTextField2: UITextField!
     var myAudioPlayer : AVAudioPlayer!
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,27 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         
         
+    
+    
+        //空の配列を用意
+        
+        
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("NAME")) != nil){
+            
+            //objectsを配列として確定させ、前回の保存内容を格納
+            let objects = defaults.objectForKey("NAME") as? NSArray
+            
+            //各名前を格納するための変数を宣言
+            var nameString:AnyObject
+            
+            //前回の保存内容が格納された配列の中身を一つずつ取り出す
+            for nameString in objects!{
+                //配列に追加していく
+                names.append(nameString as NSString)
+            }
+        }
+        
     }
     
     /*
@@ -78,11 +101,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"         // フォーマットの指定
         var timenow = dateFormatter.stringFromDate(now);
         var 回数:Int = 0
-        for val in emptyarray{
-        if(timenow==val){
+        for val:AnyObject in names{
+        if(timenow==val as NSString){
         
             Timer()
-            emptyarray.removeAtIndex(回数)
+            names.removeAtIndex(回数)
         }
             回数++
         }
@@ -133,21 +156,27 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     
     func myOK(){
+        names = names as NSArray
         var ok:Int?
-        ok = emptyarray.count
+        ok = names.count
         
         
-        emptyarray.append(myTextField.text)
-        println("\(emptyarray[ok!]) + \(myTextField.text) ")
+        names.append(myTextField.text)
+        println("\(names[ok!]) + \(myTextField.text) ")
     println("\(ok!)")
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+      /*  let appDel: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let memoContext: NSManagedObjectContext! = appDel.managedObjectContext!
         let memoEntity: NSEntityDescription = NSEntityDescription.entityForName("Task", inManagedObjectContext: memoContext)!
         var newData = Task(entity: memoEntity, insertIntoManagedObjectContext: memoContext)
         newData.memo = myTextField.text
         newData.date = NSDate()
-    
-        }
+    */
+        //NSUserDefaultsのインスタンスを生成
+        defaults.setObject(names, forKey:"NAME")
+        
+        // シンクロを入れないとうまく動作しないときがあります
+        defaults.synchronize()
+    }
     
 
     func myCancel(){}
