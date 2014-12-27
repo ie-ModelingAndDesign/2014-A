@@ -14,11 +14,11 @@
 import UIKit
 import AVFoundation
 import CoreData
+import Foundation
 
 class ViewController: UIViewController, UIPickerViewDelegate {
     var array = [AnyObject]()
     var myTextField: UITextField!
-    var myTextField2: UITextField!
     var myAudioPlayer : AVAudioPlayer!
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -161,11 +161,38 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         ok = array.count
         
         
-        array.append(myTextField.text)
-        println("\(array[ok!]) + \(myTextField.text) ")
+       // println("\(array[ok!]) + \(myTextField.text) ")
     println("\(ok!)")
-    
-        //NSUserDefaultsのインスタンスを生成
+        let arr1 = myTextField.text.componentsSeparatedByString("/")
+        let arr2 = arr1[2].componentsSeparatedByString(" ")
+        let arr3 = arr2[1].componentsSeparatedByString(":")
+        
+        var arr = arr3[1].toInt()
+        var arr4 = arr3[0].toInt()
+        if (arr<30){
+        arr = 30-arr!
+        arr = 60-arr!
+        arr4 = arr4!-1
+        var asa3 = arr4!
+        var asa2 = arr!
+            var last:NSString = arr1[0] + "/\(arr1[1])" + "/\(arr2[0])" + " \(asa3)" + ":\(asa2)"
+        println("\(last)")
+        array.append(last)
+            
+        }else{
+           var asa = arr!-30
+            var asa4 = arr4!
+            if(asa<10){
+            var last2:NSString = arr1[0] + "/\(arr1[1])" + "/\(arr2[0])" + " \(asa4)" + ":0\(asa)"
+            println("\(last2)")
+                array.append(last2)}
+            else{
+                var last3:NSString = arr1[0] + "/\(arr1[1])" + "/\(arr2[0])" + " \(asa4)" + ":\(asa)"
+                println("\(last3)")
+                array.append(last3)
+            }
+        }
+       
         defaults.setObject(array, forKey:"NAME")
         defaults.synchronize()
     }
