@@ -13,12 +13,14 @@
 
 import UIKit
 import AVFoundation
+import CoreData
+import Foundation
 
 class ViewController: UIViewController, UIPickerViewDelegate {
-    var emptyarray:[String?] = []
+    var array = [AnyObject]()
     var myTextField: UITextField!
-    var myTextField2: UITextField!
     var myAudioPlayer : AVAudioPlayer!
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,27 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         
         
+    
+    
+        //空の配列を用意
+        
+        
+        //前回の保存内容があるかどうかを判定
+        if((defaults.objectForKey("NAME")) != nil){
+            
+            //objectsを配列として確定させ、前回の保存内容を格納
+            let objects = defaults.objectForKey("NAME") as? NSArray
+            
+            //各名前を格納するための変数を宣言
+            var nameString:AnyObject
+            
+            //前回の保存内容が格納された配列の中身を一つずつ取り出す
+            for nameString in objects!{
+                //配列に追加していく
+                array.append(nameString as NSString)
+            }
+        }
+        
     }
     
     /*
@@ -77,11 +100,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"         // フォーマットの指定
         var timenow = dateFormatter.stringFromDate(now);
         var 回数:Int = 0
-        for val in emptyarray{
-        if(timenow==val){
+        for val:AnyObject in array{
+        if(timenow==val as NSString){
         
-            Timer()
-            emptyarray.removeAtIndex(回数)
+            Alert()
+            array.removeAtIndex(回数)
         }
             回数++
         }
@@ -93,7 +116,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     
-    func Timer(){
+    func Alert(){
         
        // UIAlertControllerを作成する.
         let myAlert = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: .Alert)
@@ -108,6 +131,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
     }
     func 確認(){
+        //保存の際の確認
         let 確認Alert = UIAlertController(title: "確認", message: "この時間に設定しますか?", preferredStyle: .Alert)
         確認Alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: {action in self.myOK() }))
         確認Alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: {action in self.myCancel()}))
@@ -132,16 +156,46 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     
     func myOK(){
+        array = array as NSArray
         var ok:Int?
-        ok = emptyarray.count
+        ok = array.count
         
         
-        emptyarray.append(myTextField.text)
-        println("\(emptyarray[ok!]) + \(myTextField.text) ")
+       // println("\(array[ok!]) + \(myTextField.text) ")
     println("\(ok!)")
+        let arr1 = myTextField.text.componentsSeparatedByString("/")
+        let arr2 = arr1[2].componentsSeparatedByString(" ")
+        let arr3 = arr2[1].componentsSeparatedByString(":")
         
-    
+        var arr = arr3[1].toInt()
+        var arr4 = arr3[0].toInt()
+        if (arr<30){
+        arr = 30-arr!
+        arr = 60-arr!
+        arr4 = arr4!-1
+        var asa3 = arr4!
+        var asa2 = arr!
+            var last:NSString = arr1[0] + "/\(arr1[1])" + "/\(arr2[0])" + " \(asa3)" + ":\(asa2)"
+        println("\(last)")
+        array.append(last)
+            
+        }else{
+           var asa = arr!-30
+            var asa4 = arr4!
+            if(asa<10){
+            var last2:NSString = arr1[0] + "/\(arr1[1])" + "/\(arr2[0])" + " \(asa4)" + ":0\(asa)"
+            println("\(last2)")
+                array.append(last2)}
+            else{
+                var last3:NSString = arr1[0] + "/\(arr1[1])" + "/\(arr2[0])" + " \(asa4)" + ":\(asa)"
+                println("\(last3)")
+                array.append(last3)
+            }
         }
+       
+        defaults.setObject(array, forKey:"NAME")
+        defaults.synchronize()
+    }
     
 
     func myCancel(){}
