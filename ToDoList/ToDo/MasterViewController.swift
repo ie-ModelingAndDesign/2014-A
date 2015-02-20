@@ -64,7 +64,15 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
         if segue.identifier == "ShowAddItemView" {
             let addItemViewController : AddItemViewController? = segue.destinationViewController.viewControllers?[0] as AddItemViewController?
             addItemViewController!.delegate = self;
+        } else if segue.identifier == "showDetail" {
+            let indexPath = self.tableView.indexPathForSelectedRow()?.row
+            let data = objects[indexPath!] as String
+            println(data)
         }
+    }
+    
+    @IBAction func backDetaliViewController(segue:UIStoryboardSegue){
+        println("backDetaliViewController")
     }
     
     // MARK: - Table View
@@ -79,7 +87,6 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        
         let object = objects[indexPath.row] as String
         cell.textLabel?.text = object
         return cell
