@@ -105,7 +105,15 @@ class AlarmController: UIViewController, UIPickerViewDelegate {
     
     func Alert(){
         
-        // UIAlertControllerを作成する.
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let next:UIViewController = storyboard.instantiateViewControllerWithIdentifier("NextViewController") as UIViewController
+        
+        next.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+        
+        self.presentViewController(next, animated: true, completion: nil)
+        /*
+         UIAlertControllerを作成する.
         let myAlert = UIAlertController(title: "タイトル", message: "メッセージ", preferredStyle: .Alert)
         
         
@@ -115,8 +123,10 @@ class AlarmController: UIViewController, UIPickerViewDelegate {
         // UIAlertを発動する.
         presentViewController(myAlert, animated: true, completion: nil)
         myAudioPlayer.play()
+*/
         
     }
+    
     func 確認(){
         //保存の際の確認
         let 確認Alert = UIAlertController(title: "確認", message: "この時間に設定しますか?", preferredStyle: .Alert)
@@ -130,14 +140,6 @@ class AlarmController: UIViewController, UIPickerViewDelegate {
         確認()
     }
     
-    func music() {
-        
-        
-        
-        
-        myAudioPlayer.stop()
-        
-    }
     
     
     

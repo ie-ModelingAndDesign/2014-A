@@ -37,7 +37,9 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func backMasterViewController(segue:UIStoryboardSegue){
+        println(backMasterViewController)
+    }
     
     func addItemViewControllerDidCancel(controller: AddItemViewController) -> Void {
         println("addItemViewControllerDidCancel")
@@ -68,6 +70,10 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
             let indexPath = self.tableView.indexPathForSelectedRow()?.row
             let data = objects[indexPath!] as String
             println(data)
+<<<<<<< HEAD
+=======
+            defaults.setObject(data, forKey:"DETAIL")
+>>>>>>> origin/shiroma
         }
     }
     
