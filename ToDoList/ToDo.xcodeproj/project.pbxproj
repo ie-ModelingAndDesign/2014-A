@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05ECDBF11A95EB7F00A257C1 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */; };
 		4169980819E564FB00EBD0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980719E564FB00EBD0E7 /* AppDelegate.swift */; };
 		4169980A19E564FB00EBD0E7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980919E564FB00EBD0E7 /* MasterViewController.swift */; };
 		4169980C19E564FB00EBD0E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980B19E564FB00EBD0E7 /* DetailViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		4169980219E564FB00EBD0E7 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4169980619E564FB00EBD0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4169980719E564FB00EBD0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				4169980719E564FB00EBD0E7 /* AppDelegate.swift */,
 				4169980919E564FB00EBD0E7 /* MasterViewController.swift */,
 				4169980B19E564FB00EBD0E7 /* DetailViewController.swift */,
+				05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */,
 				4169980D19E564FB00EBD0E7 /* Main.storyboard */,
 				4169981019E564FB00EBD0E7 /* Images.xcassets */,
 				4169981219E564FB00EBD0E7 /* LaunchScreen.xib */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4169980C19E564FB00EBD0E7 /* DetailViewController.swift in Sources */,
+				05ECDBF11A95EB7F00A257C1 /* NextViewController.swift in Sources */,
 				4169982A19E5669200EBD0E7 /* AddItemViewController.swift in Sources */,
 				61BC73EE1A7DE67000AE4154 /* AddAlarmViewController.swift in Sources */,
 				4169980A19E564FB00EBD0E7 /* MasterViewController.swift in Sources */,

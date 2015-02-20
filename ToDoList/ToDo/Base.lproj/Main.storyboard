@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -44,6 +44,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="4I7-Np-HN4" kind="presentation" identifier="showDetail" id="xbI-gK-sBO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -62,7 +65,47 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="64"/>
+            <point key="canvasLocation" x="615" y="64"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="rDt-qW-nZa">
+            <objects>
+                <viewController id="ObM-pC-w7x" customClass="DetailViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iNN-Ig-5cL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ys2-AM-DQ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vby-QW-yuT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ3-7f-C2Q">
+                                <rect key="frame" x="143" y="470" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GQG-CD-A2o" kind="unwind" unwindAction="backMasterViewController:" id="aaF-TN-uIA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4I3-qW-nGt">
+                                <rect key="frame" x="139" y="257" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0rL-Uc-Nda"/>
+                    <connections>
+                        <outlet property="paramLabel" destination="4I3-qW-nGt" id="XkE-P1-WGB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOz-D4-DaN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GQG-CD-A2o" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2115" y="823"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="GEB-0W-vlQ">
@@ -141,15 +184,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQo-eT-D6W">
-                                <rect key="frame" x="78" y="405" width="171" height="30"/>
-                                <state key="normal" title="時間を設定する">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pushbutton:" destination="3xZ-HJ-3RC" eventType="touchUpInside" id="e9e-Zr-x3A"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdy-Lm-YSF">
                                 <rect key="frame" x="78" y="488" width="171" height="30"/>
                                 <state key="normal" title="Back">
@@ -160,6 +194,15 @@
                                     <segue destination="KMA-fI-N50" kind="unwind" unwindAction="backAlarmViewController:" id="3Za-Ga-wNa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQo-eT-D6W">
+                                <rect key="frame" x="78" y="402" width="171" height="30"/>
+                                <state key="normal" title="時間を設定する">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushbutton:" destination="3xZ-HJ-3RC" eventType="touchUpInside" id="e9e-Zr-x3A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -168,6 +211,45 @@
                 <exit id="KMA-fI-N50" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2894" y="64"/>
+        </scene>
+        <!--Music Controller-->
+        <scene sceneID="PE1-VU-H6T">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hl3-5T-joe" customClass="MusicController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JD4-Pc-47C"/>
+                        <viewControllerLayoutGuide type="bottom" id="raz-AC-VaV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yYN-jl-ZCb" customClass="NextController">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-o8-Eqm">
+                                <rect key="frame" x="179" y="459" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hdq-ct-hns" kind="unwind" unwindAction="backMasterViewController:" id="Tb1-WD-u6e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-5g-dOL">
+                                <rect key="frame" x="157" y="421" width="90" height="30"/>
+                                <state key="normal" title="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopmusic:" destination="Hl3-5T-joe" eventType="touchUpInside" id="Jz7-14-nBx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFd-ug-4kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hdq-ct-hns" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3612" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l14-Uy-OGz">
@@ -186,6 +268,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOc-4h-SDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1351" y="64"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R3U-he-UQA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4I7-Np-HN4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mGm-lP-IWH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ObM-pC-w7x" kind="relationship" relationship="rootViewController" id="f7G-cT-RvP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcp-aI-pae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="835"/>
         </scene>
     </scenes>
 </document>
