@@ -154,14 +154,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="FHS-WL-vfl">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Gap-I9-8Tt">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="Gap-I9-8Tt">
                             <connections>
                                 <action selector="clickedCancelButton:" destination="hCV-P3-ReJ" id="mL6-v8-HmL"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BDD-oU-4Pk">
-                            <connections>
-                                <action selector="clickedSaveButton:" destination="hCV-P3-ReJ" id="At3-yw-6Sz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -225,17 +220,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-o8-Eqm">
-                                <rect key="frame" x="179" y="459" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="hdq-ct-hns" kind="unwind" unwindAction="backMasterViewController:" id="Tb1-WD-u6e"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-5g-dOL">
-                                <rect key="frame" x="157" y="421" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-5g-dOL">
+                                <rect key="frame" x="255" y="313" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="xjs-qI-rOi"/>
+                                </constraints>
                                 <state key="normal" title="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -243,9 +232,38 @@
                                     <action selector="stopmusic:" destination="Hl3-5T-joe" eventType="touchUpInside" id="Jz7-14-nBx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDR-k7-GlV">
+                                <rect key="frame" x="200" y="169" width="201" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="djO-An-9Gy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI0-o8-Eqm">
+                                <rect key="frame" x="277" y="364" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hdq-ct-hns" kind="unwind" unwindAction="backMasterViewController:" id="Tb1-WD-u6e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tI0-o8-Eqm" firstAttribute="centerX" secondItem="yYN-jl-ZCb" secondAttribute="centerX" id="6Ff-M1-r1A"/>
+                            <constraint firstItem="raz-AC-VaV" firstAttribute="top" secondItem="tI0-o8-Eqm" secondAttribute="bottom" constant="206" id="8Q6-bE-Pdx"/>
+                            <constraint firstItem="qKg-5g-dOL" firstAttribute="centerX" secondItem="tI0-o8-Eqm" secondAttribute="centerX" id="M9P-eM-NoW"/>
+                            <constraint firstItem="tI0-o8-Eqm" firstAttribute="top" secondItem="qKg-5g-dOL" secondAttribute="bottom" constant="21" id="YLy-8E-k5O"/>
+                            <constraint firstItem="qKg-5g-dOL" firstAttribute="centerX" secondItem="gDR-k7-GlV" secondAttribute="centerX" id="ex3-jg-JgA"/>
+                            <constraint firstItem="gDR-k7-GlV" firstAttribute="top" secondItem="JD4-Pc-47C" secondAttribute="bottom" constant="149" id="s2s-TU-4Gk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="task" destination="gDR-k7-GlV" id="QG9-BX-5lW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFd-ug-4kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hdq-ct-hns" userLabel="Exit" sceneMemberID="exit"/>

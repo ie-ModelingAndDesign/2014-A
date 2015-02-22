@@ -8,11 +8,6 @@ class AddItemViewController : UITableViewController {
        
         defaults.setInteger(2, forKey: "locate")
     }
-    @IBAction func clickedSaveButton(sender: AnyObject) {
-        println("clickedSaveButton")
-        self.delegate?.addItemViewControllerDidFinish(self, item:self.textLabel.text)
-        defaults.setInteger(0, forKey: "locate")
-    }
 
     @IBAction func gotoAlerm(sender: AnyObject) {
         

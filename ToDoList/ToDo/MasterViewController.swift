@@ -103,7 +103,7 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
         for val:AnyObject in array2{
             if(timenow==val as NSString){
                 
-                
+                appdelegate.lastask = array[回数]
                 Alert()
                 array2.removeAtIndex(回数)
                 
@@ -185,7 +185,7 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
         
        
     }
-    
+   
     func addItemViewControllerDidFinish(controller: AddItemViewController, item: String) -> Void {
         println("addItemViewControllerDidFinish item: \(item)")
         defaults.setInteger(0, forKey: "frag")

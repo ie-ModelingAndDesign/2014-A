@@ -11,12 +11,16 @@ import UIKit
 import AVFoundation
 class MusicController: UIViewController{
     var myAudioPlayer : AVAudioPlayer!
+    var appdelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
     let myButton: UIButton = UIButton()
     let defaults = NSUserDefaults.standardUserDefaults()
+    
+    @IBOutlet var task: UILabel!
 override func viewDidLoad() {
     
     super.viewDidLoad()
-   
+    var a = appdelegate.lastask as String
+   task.text = a
     let soundFilePath : NSString = NSBundle.mainBundle().pathForResource("Sample", ofType: "mp3")!
     let fileURL : NSURL = NSURL(fileURLWithPath: soundFilePath)!
     myAudioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
@@ -27,6 +31,8 @@ override func viewDidLoad() {
         myAudioPlayer.stop()
         defaults.setBool(false, forKey: "FRAG")
     }
+    
+    
     
     func onClickMyButton(sender: UIButton){
         println("onClickMyButton:")
