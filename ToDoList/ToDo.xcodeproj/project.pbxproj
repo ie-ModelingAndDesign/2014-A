@@ -14,6 +14,8 @@
 		1230BA821A99DDFA004765A9 /* Clock-alarm-in-water3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA811A99DDFA004765A9 /* Clock-alarm-in-water3.jpg */; };
 		1230BA841A99DE00004765A9 /* fire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA831A99DE00004765A9 /* fire.jpg */; };
 		1230BA861A99E70A004765A9 /* alarm8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA851A99E70A004765A9 /* alarm8.png */; };
+		1230BA881A99F8BF004765A9 /* a1180_004758.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA871A99F8BF004765A9 /* a1180_004758.jpg */; };
+		1230BA8A1A99F983004765A9 /* black0035.png in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA891A99F983004765A9 /* black0035.png */; };
 		4169980819E564FB00EBD0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980719E564FB00EBD0E7 /* AppDelegate.swift */; };
 		4169980A19E564FB00EBD0E7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980919E564FB00EBD0E7 /* MasterViewController.swift */; };
 		4169980C19E564FB00EBD0E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980B19E564FB00EBD0E7 /* DetailViewController.swift */; };
@@ -43,6 +45,8 @@
 		1230BA811A99DDFA004765A9 /* Clock-alarm-in-water3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Clock-alarm-in-water3.jpg"; path = "../../../../../Desktop/Clock-alarm-in-water3.jpg"; sourceTree = "<group>"; };
 		1230BA831A99DE00004765A9 /* fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fire.jpg; path = ../../../../../Desktop/fire.jpg; sourceTree = "<group>"; };
 		1230BA851A99E70A004765A9 /* alarm8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alarm8.png; path = ../../../../../Desktop/alarm8.png; sourceTree = "<group>"; };
+		1230BA871A99F8BF004765A9 /* a1180_004758.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = a1180_004758.jpg; path = ../../../../../Desktop/a1180_004758.jpg; sourceTree = "<group>"; };
+		1230BA891A99F983004765A9 /* black0035.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = black0035.png; path = ../../../../../Desktop/black0035.png; sourceTree = "<group>"; };
 		4169980219E564FB00EBD0E7 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4169980619E564FB00EBD0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4169980719E564FB00EBD0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +104,10 @@
 				4169980719E564FB00EBD0E7 /* AppDelegate.swift */,
 				4169980919E564FB00EBD0E7 /* MasterViewController.swift */,
 				4169980B19E564FB00EBD0E7 /* DetailViewController.swift */,
+				1230BA871A99F8BF004765A9 /* a1180_004758.jpg */,
 				1230BA831A99DE00004765A9 /* fire.jpg */,
 				1230BA811A99DDFA004765A9 /* Clock-alarm-in-water3.jpg */,
+				1230BA891A99F983004765A9 /* black0035.png */,
 				1230BA851A99E70A004765A9 /* alarm8.png */,
 				1230BA7F1A99DDF6004765A9 /* Clock-alarm-in-water.jpg */,
 				1230BA7D1A99DDEA004765A9 /* logo8.png */,
@@ -229,8 +235,10 @@
 				1230BA7C1A99DD4E004765A9 /* Sample.mp3 in Resources */,
 				1230BA841A99DE00004765A9 /* fire.jpg in Resources */,
 				1230BA861A99E70A004765A9 /* alarm8.png in Resources */,
+				1230BA881A99F8BF004765A9 /* a1180_004758.jpg in Resources */,
 				4169981119E564FB00EBD0E7 /* Images.xcassets in Resources */,
 				1230BA7E1A99DDEA004765A9 /* logo8.png in Resources */,
+				1230BA8A1A99F983004765A9 /* black0035.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
