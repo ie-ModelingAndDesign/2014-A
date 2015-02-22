@@ -122,6 +122,7 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
     
     func addItemViewControllerDidCancel(controller: AddItemViewController) -> Void {
         println("addItemViewControllerDidCancel")
+        if(appdelegate.sample != nil && appdelegate.sample != ""){
         objects.insertObject(appdelegate.sample!, atIndex: 0)
         appdelegate.sample = ""
         defaults.setObject(objects, forKey: "TASKNAME")
@@ -181,13 +182,14 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
             }
             
         }
-        
+        }
         
        
     }
    
     func addItemViewControllerDidFinish(controller: AddItemViewController, item: String) -> Void {
         println("addItemViewControllerDidFinish item: \(item)")
+        println("save")
         defaults.setInteger(0, forKey: "frag")
         var savetext : NSMutableArray = [item]
         println("savetextcontent : \(savetext)")
@@ -249,6 +251,7 @@ class MasterViewController: UITableViewController, AddItemViewControllerDelegate
             let data = objects[indexPath!] as String
             println(data)
             defaults.setObject(data, forKey:"DETAIL")
+           appdelegate.tasktime = defaults.objectForKey("\(data)")
         }
     }
     

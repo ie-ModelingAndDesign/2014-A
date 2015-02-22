@@ -19,8 +19,8 @@ class MusicController: UIViewController{
 override func viewDidLoad() {
     
     super.viewDidLoad()
-    var a = appdelegate.lastask as String
-   task.text = a
+   
+  // task.text = appdelegate.lastask as String
     let soundFilePath : NSString = NSBundle.mainBundle().pathForResource("Sample", ofType: "mp3")!
     let fileURL : NSURL = NSURL(fileURLWithPath: soundFilePath)!
     myAudioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
