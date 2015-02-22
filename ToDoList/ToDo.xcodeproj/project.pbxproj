@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05051A601A996D4C00FBC8C4 /* Sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 05051A5F1A996D4C00FBC8C4 /* Sample.mp3 */; };
 		05ECDBF11A95EB7F00A257C1 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */; };
 		4169980819E564FB00EBD0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980719E564FB00EBD0E7 /* AppDelegate.swift */; };
 		4169980A19E564FB00EBD0E7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980919E564FB00EBD0E7 /* MasterViewController.swift */; };
@@ -16,7 +17,6 @@
 		4169981419E564FB00EBD0E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4169981219E564FB00EBD0E7 /* LaunchScreen.xib */; };
 		4169982019E564FB00EBD0E7 /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169981F19E564FB00EBD0E7 /* ToDoTests.swift */; };
 		4169982A19E5669200EBD0E7 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169982919E5669200EBD0E7 /* AddItemViewController.swift */; };
-		61B63A081A95CE7B00ABC487 /* Sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61B63A071A95CE7B00ABC487 /* Sample.mp3 */; };
 		61BC73EE1A7DE67000AE4154 /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BC73ED1A7DE67000AE4154 /* AddAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05051A5F1A996D4C00FBC8C4 /* Sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sample.mp3; sourceTree = "<group>"; };
 		05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		4169980219E564FB00EBD0E7 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4169980619E564FB00EBD0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		4169981E19E564FB00EBD0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4169981F19E564FB00EBD0E7 /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
 		4169982919E5669200EBD0E7 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		61B63A071A95CE7B00ABC487 /* Sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sample.mp3; path = ../../ALArM/ALArM/Sample.mp3; sourceTree = "<group>"; };
 		61BC73ED1A7DE67000AE4154 /* AddAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +87,7 @@
 		4169980419E564FB00EBD0E7 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				61B63A071A95CE7B00ABC487 /* Sample.mp3 */,
+				05051A5F1A996D4C00FBC8C4 /* Sample.mp3 */,
 				4169980719E564FB00EBD0E7 /* AppDelegate.swift */,
 				4169980919E564FB00EBD0E7 /* MasterViewController.swift */,
 				4169980B19E564FB00EBD0E7 /* DetailViewController.swift */,
@@ -209,7 +209,7 @@
 			files = (
 				4169980F19E564FB00EBD0E7 /* Main.storyboard in Resources */,
 				4169981419E564FB00EBD0E7 /* LaunchScreen.xib in Resources */,
-				61B63A081A95CE7B00ABC487 /* Sample.mp3 in Resources */,
+				05051A601A996D4C00FBC8C4 /* Sample.mp3 in Resources */,
 				4169981119E564FB00EBD0E7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

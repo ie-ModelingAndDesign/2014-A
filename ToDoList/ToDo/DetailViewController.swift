@@ -6,8 +6,10 @@ class DetailViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
+        defaults.setInteger(1, forKey: "locate")
  var task = defaults.objectForKey("DETAIL") as String?
         paramLabel.text = task
     }
+    
 }
 

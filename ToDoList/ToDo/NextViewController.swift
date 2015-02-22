@@ -12,10 +12,11 @@ import AVFoundation
 class MusicController: UIViewController{
     var myAudioPlayer : AVAudioPlayer!
     let myButton: UIButton = UIButton()
+    let defaults = NSUserDefaults.standardUserDefaults()
 override func viewDidLoad() {
     
     super.viewDidLoad()
-    
+   
     let soundFilePath : NSString = NSBundle.mainBundle().pathForResource("Sample", ofType: "mp3")!
     let fileURL : NSURL = NSURL(fileURLWithPath: soundFilePath)!
     myAudioPlayer = AVAudioPlayer(contentsOfURL: fileURL, error: nil)
@@ -24,6 +25,7 @@ override func viewDidLoad() {
     }
     @IBAction func stopmusic(sender: AnyObject) {
         myAudioPlayer.stop()
+        defaults.setBool(false, forKey: "FRAG")
     }
     
     func onClickMyButton(sender: UIButton){
@@ -32,6 +34,8 @@ override func viewDidLoad() {
         println("sender.tag:\(sender.tag)")
         
     }
+    
+    
     
    
     

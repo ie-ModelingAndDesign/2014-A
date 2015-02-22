@@ -122,6 +122,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
+                                <action selector="gotoAlerm:" destination="hCV-P3-ReJ" eventType="touchUpInside" id="lj7-r1-P5R"/>
                                 <segue destination="3xZ-HJ-3RC" kind="presentation" identifier="goAlarmViewController" id="Xpv-b1-5Nb"/>
                             </connections>
                         </button>
