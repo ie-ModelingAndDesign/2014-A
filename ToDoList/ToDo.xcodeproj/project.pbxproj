@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05051A621A99EC5000FBC8C4 /* alarm8.png in Resources */ = {isa = PBXBuildFile; fileRef = 05051A611A99EC5000FBC8C4 /* alarm8.png */; };
+		05051A651A99EC5C00FBC8C4 /* Clock-alarm-in-water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05051A631A99EC5C00FBC8C4 /* Clock-alarm-in-water.jpg */; };
+		05051A661A99EC5C00FBC8C4 /* Clock-alarm-in-water3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05051A641A99EC5C00FBC8C4 /* Clock-alarm-in-water3.jpg */; };
+		05051A681A99EC6500FBC8C4 /* fire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 05051A671A99EC6500FBC8C4 /* fire.jpg */; };
+		05051A6A1A99EC7000FBC8C4 /* logo8.png in Resources */ = {isa = PBXBuildFile; fileRef = 05051A691A99EC7000FBC8C4 /* logo8.png */; };
 		05ECDBF11A95EB7F00A257C1 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */; };
 		1230BA7C1A99DD4E004765A9 /* Sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA7B1A99DD4E004765A9 /* Sample.mp3 */; };
-		1230BA7E1A99DDEA004765A9 /* logo8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA7D1A99DDEA004765A9 /* logo8.png */; };
-		1230BA801A99DDF6004765A9 /* Clock-alarm-in-water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA7F1A99DDF6004765A9 /* Clock-alarm-in-water.jpg */; };
-		1230BA821A99DDFA004765A9 /* Clock-alarm-in-water3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA811A99DDFA004765A9 /* Clock-alarm-in-water3.jpg */; };
-		1230BA841A99DE00004765A9 /* fire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA831A99DE00004765A9 /* fire.jpg */; };
-		1230BA861A99E70A004765A9 /* alarm8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1230BA851A99E70A004765A9 /* alarm8.png */; };
 		4169980819E564FB00EBD0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980719E564FB00EBD0E7 /* AppDelegate.swift */; };
 		4169980A19E564FB00EBD0E7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980919E564FB00EBD0E7 /* MasterViewController.swift */; };
 		4169980C19E564FB00EBD0E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169980B19E564FB00EBD0E7 /* DetailViewController.swift */; };
@@ -36,13 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05051A611A99EC5000FBC8C4 /* alarm8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarm8.png; sourceTree = "<group>"; };
+		05051A631A99EC5C00FBC8C4 /* Clock-alarm-in-water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Clock-alarm-in-water.jpg"; sourceTree = "<group>"; };
+		05051A641A99EC5C00FBC8C4 /* Clock-alarm-in-water3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Clock-alarm-in-water3.jpg"; sourceTree = "<group>"; };
+		05051A671A99EC6500FBC8C4 /* fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fire.jpg; sourceTree = "<group>"; };
+		05051A691A99EC7000FBC8C4 /* logo8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo8.png; sourceTree = "<group>"; };
 		05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		1230BA7B1A99DD4E004765A9 /* Sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sample.mp3; path = ../../ALArM/ALArM/Sample.mp3; sourceTree = "<group>"; };
-		1230BA7D1A99DDEA004765A9 /* logo8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo8.png; path = ../../../../../Desktop/logo8.png; sourceTree = "<group>"; };
-		1230BA7F1A99DDF6004765A9 /* Clock-alarm-in-water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Clock-alarm-in-water.jpg"; path = "../../../../../Desktop/Clock-alarm-in-water.jpg"; sourceTree = "<group>"; };
-		1230BA811A99DDFA004765A9 /* Clock-alarm-in-water3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Clock-alarm-in-water3.jpg"; path = "../../../../../Desktop/Clock-alarm-in-water3.jpg"; sourceTree = "<group>"; };
-		1230BA831A99DE00004765A9 /* fire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fire.jpg; path = ../../../../../Desktop/fire.jpg; sourceTree = "<group>"; };
-		1230BA851A99E70A004765A9 /* alarm8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alarm8.png; path = ../../../../../Desktop/alarm8.png; sourceTree = "<group>"; };
 		4169980219E564FB00EBD0E7 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4169980619E564FB00EBD0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4169980719E564FB00EBD0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,11 +100,11 @@
 				4169980719E564FB00EBD0E7 /* AppDelegate.swift */,
 				4169980919E564FB00EBD0E7 /* MasterViewController.swift */,
 				4169980B19E564FB00EBD0E7 /* DetailViewController.swift */,
-				1230BA831A99DE00004765A9 /* fire.jpg */,
-				1230BA811A99DDFA004765A9 /* Clock-alarm-in-water3.jpg */,
-				1230BA851A99E70A004765A9 /* alarm8.png */,
-				1230BA7F1A99DDF6004765A9 /* Clock-alarm-in-water.jpg */,
-				1230BA7D1A99DDEA004765A9 /* logo8.png */,
+				05051A631A99EC5C00FBC8C4 /* Clock-alarm-in-water.jpg */,
+				05051A671A99EC6500FBC8C4 /* fire.jpg */,
+				05051A691A99EC7000FBC8C4 /* logo8.png */,
+				05051A641A99EC5C00FBC8C4 /* Clock-alarm-in-water3.jpg */,
+				05051A611A99EC5000FBC8C4 /* alarm8.png */,
 				05ECDBF01A95EB7F00A257C1 /* NextViewController.swift */,
 				1230BA7B1A99DD4E004765A9 /* Sample.mp3 */,
 				4169980D19E564FB00EBD0E7 /* Main.storyboard */,
@@ -223,14 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4169980F19E564FB00EBD0E7 /* Main.storyboard in Resources */,
-				1230BA801A99DDF6004765A9 /* Clock-alarm-in-water.jpg in Resources */,
+				05051A681A99EC6500FBC8C4 /* fire.jpg in Resources */,
 				4169981419E564FB00EBD0E7 /* LaunchScreen.xib in Resources */,
-				1230BA821A99DDFA004765A9 /* Clock-alarm-in-water3.jpg in Resources */,
+				05051A651A99EC5C00FBC8C4 /* Clock-alarm-in-water.jpg in Resources */,
 				1230BA7C1A99DD4E004765A9 /* Sample.mp3 in Resources */,
-				1230BA841A99DE00004765A9 /* fire.jpg in Resources */,
-				1230BA861A99E70A004765A9 /* alarm8.png in Resources */,
+				05051A621A99EC5000FBC8C4 /* alarm8.png in Resources */,
+				05051A661A99EC5C00FBC8C4 /* Clock-alarm-in-water3.jpg in Resources */,
 				4169981119E564FB00EBD0E7 /* Images.xcassets in Resources */,
-				1230BA7E1A99DDEA004765A9 /* logo8.png in Resources */,
+				05051A6A1A99EC7000FBC8C4 /* logo8.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
